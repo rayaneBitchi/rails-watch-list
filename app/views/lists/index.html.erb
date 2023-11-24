@@ -1,0 +1,24 @@
+<div class="banner text-center">
+  <div class="container">
+    <h1>Save any kind of movies</h1>
+    <p>classic</p>
+  </div>
+</div>
+
+<div class="container mt-4 mb-4">
+    <div class="d-flex justify-content-between align-items-center mt-2 mb-4">
+        <h1>My Lists</h1>
+        <button type="button" class="btn btn-success text-light">Create a new list</button>
+    </div>
+
+    
+    <div class="cards">
+        <% @lists.each do |list| %>
+            <%= link_to list_bookmarks_path(list) do %>
+                <div class="card-category">
+                <%= list.name %>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+</div>
