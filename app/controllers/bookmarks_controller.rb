@@ -3,4 +3,8 @@ class BookmarksController < ApplicationController
         @list = List.find(params[:list_id])
         @movies = @list.movies
     end
+
+    def new
+        raise
+    end
 end
