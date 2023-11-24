@@ -17,7 +17,7 @@
             <%= image_tag(movie.poster_url) %>
             <div class="card-trip-infos">
                 <div>
-                    <div class="d-flex align-items-center"><h2><%= movie.title %>&#8201;.&#8201;</h2><span><%= movie.rating %>⭐</span></div>
+                    <div class="d-flex align-items-center"><h2><%= movie.title %>&#8201;.&#8201;</h2><span><%= number_with_precision movie.rating, :precision => 2 %>⭐</span></div>
                     <p><%= movie.overview %></p>
                 </div>
             </div>

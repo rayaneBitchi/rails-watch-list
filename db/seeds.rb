@@ -23,3 +23,9 @@ movies["results"].each do |movie|
     poster_path = "https://image.tmdb.org/t/p/original#{movie["poster_path"]}"
     Movie.create(title: movie["original_title"], overview: movie["overview"], poster_url: poster_path , rating:  movie["vote_average"])
 end
+
+List.create(name: "Drama")
+List.create(name: "Superhero")
+List.create(name: "Romance")
+List.create(name: "Girl Power")
+
