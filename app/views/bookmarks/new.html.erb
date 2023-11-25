@@ -1,0 +1,12 @@
+<div class="banner text-center">
+  <div class="container">
+    <h1><%= @list.name  %> movies</h1>
+  </div>
+</div>
+<div class="container mt-4">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.input :comment %>
+        <%= f.association :movie %>
+        <%= f.submit "Add movie", class: "btn btn-primary"%>
+    <% end %>
+</div>
